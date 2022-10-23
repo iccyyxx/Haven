@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" />
+    <script src="./index.js" type="module"></script>
+  </head>
+
+  <body>
+    <div class="bg" id="app">
+      <header>
+        <div class="h1">iccyyxx 的歌单</div>
+      </header>
+      <audio id="music" ref="music" src="./music/许飞 - 突然好想你.mp3"></audio>
+      <main>
+        <div class="progress">
+          <div class="music-name">突然好想你</div>
+          <div class="progress-bar">
+            <div class="cur-bar" ref="curBar" :style="{'width':width}"></div>
+          </div>
+          <div class="time">
+            <div>{{nowTime}}</div>
+            <div>{{allTime}}</div>
+          </div>
+        </div>
+        <div class="controllor">
+          <div class="music-img" >
+            <img src="./img/突然好想你.png" :class="{pausing:!isPlay}" >
+          </div>
+          <div class="btn-items">
+            <i class="iconfont" v-html="btn_pre" @click="onPre"></i>
+            <i class="iconfont" v-html="isPlay?btn_stop:btn_play" @click="isPlay=!isPlay"></i>
+            <i class="iconfont" v-html="btn_next" @click="next"></i>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,119 @@
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: 'iconfont'; /* Project id 3723187 */
+  src: url('//at.alicdn.com/t/c/font_3723187_dhea7obgtwe.woff2?t=1666431058594')
+      format('woff2'),
+    url('//at.alicdn.com/t/c/font_3723187_dhea7obgtwe.woff?t=1666431058594')
+      format('woff'),
+    url('//at.alicdn.com/t/c/font_3723187_dhea7obgtwe.ttf?t=1666431058594')
+      format('truetype');
+}
+.iconfont {
+  font-family: 'iconfont' !important;
+  font-size: 40px;
+  padding: 10px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgb(132, 130, 130);
+  /* 禁止双击 */
+  -moz-user-select: none; /*火狐*/
+  -webkit-user-select: none; /*webkit浏览器*/
+  -ms-user-select: none; /*IE10*/
+  -khtml-user-select: none; /*早期浏览器*/
+  user-select: none;
+}
+
+html {
+  font-size: 12px;
+}
+body {
+  width: 100%;
+  height: 100vh;
+}
+.bg {
+  background: linear-gradient(rgba(41, 189, 165, 0.402), #fff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.h1 {
+  font-size: 2.5rem;
+  font-family: '华文楷体';
+  padding-bottom: 5.5rem;
+  font-weight: 600;
+}
+.progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding: 10px 20px 10px 130px;
+  width: 190px;
+  height: 60px;
+  border-radius: 15px 15px 0 0;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.music-name {
+  font-size: 20px;
+  font-weight: 800;
+  font-family: '华文楷体';
+}
+.progress-bar {
+  height: 3px;
+  width: 190px;
+  background-color: #fff;
+}
+.cur-bar {
+  height: 3px;
+  width: 10%;
+  background-color: rgb(44, 166, 166);
+}
+
+.time {
+  display: flex;
+  width: 190px;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.controllor {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 360px;
+  height: 70px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px 0 rgba(41, 189, 165, 0.402);
+}
+@keyframes playing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.pausing {
+  animation-play-state: paused !important;
+}
+.music-img img {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  animation: playing 3s linear infinite;
+}
+
+.btn-items {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+}
